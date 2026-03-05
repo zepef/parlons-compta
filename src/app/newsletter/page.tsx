@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import NewsletterSignup from "@/components/NewsletterSignup";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "Newsletter — Parlons Compta",
@@ -26,7 +26,7 @@ export default function NewsletterPage() {
       </div>
 
       <div className="mt-10 rounded-2xl border border-zinc-100 bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-        <NewsletterSignup variant="inline" />
+        <NewsletterForm />
       </div>
 
       <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
