@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "Parlons Compta — Hub IA pour la comptabilité française",
@@ -244,19 +245,9 @@ export default function Home() {
               Recevez une notification lors du lancement de chaque nouveau
               produit et des mises à jour légales importantes.
             </p>
-            <form className="mt-8 flex gap-3" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="votre@email.com"
-                className="flex-1 rounded-full border border-zinc-200 bg-white px-5 py-3 text-sm text-zinc-900 placeholder-zinc-400 outline-none focus:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50 dark:placeholder-zinc-500 dark:focus:border-zinc-500"
-              />
-              <button
-                type="submit"
-                className="rounded-full bg-zinc-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
-              >
-                S&apos;inscrire
-              </button>
-            </form>
+            <div className="mt-8">
+              <NewsletterForm />
+            </div>
             <p className="mt-3 text-xs text-zinc-400">
               Pas de spam. Désabonnement en un clic.
             </p>

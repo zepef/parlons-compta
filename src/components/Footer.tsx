@@ -1,9 +1,25 @@
 import Link from "next/link";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export default function Footer() {
   return (
     <footer className="border-t border-zinc-100 bg-white dark:border-zinc-800 dark:bg-zinc-950">
       <div className="mx-auto max-w-6xl px-6 py-12">
+        {/* Newsletter strip */}
+        <div className="mb-10 rounded-xl border border-zinc-100 bg-zinc-50 p-6 dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:items-center">
+            <div>
+              <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">
+                Restez informé des dernières nouveautés
+              </h3>
+              <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
+                Nouveaux produits, mises à jour légales, guides pratiques en comptabilité IA.
+              </p>
+            </div>
+            <NewsletterForm compact />
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-2">

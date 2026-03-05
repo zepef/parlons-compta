@@ -11,6 +11,7 @@ export interface PostMeta {
   excerpt: string;
   readTime: number;
   author?: string;
+  ogImage?: string;
 }
 
 export interface Post extends PostMeta {
@@ -42,6 +43,7 @@ export function getAllPosts(): PostMeta[] {
         excerpt: data.excerpt ?? "",
         readTime: calculateReadTime(content),
         author: data.author,
+        ogImage: data.ogImage,
       };
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -61,6 +63,7 @@ export function getPost(slug: string): Post | null {
     excerpt: data.excerpt ?? "",
     readTime: calculateReadTime(content),
     author: data.author,
+    ogImage: data.ogImage,
     content,
   };
 }
